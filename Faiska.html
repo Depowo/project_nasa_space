@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Grande Viagem de Faiska</title>
+    <link rel="stylesheet" href="style_css_final.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-pattern"></div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="logo">Faiska</div>
+        <div class="chapter-indicator" id="chapterIndicator">
+            <span class="current">1</span>
+            <span class="separator">/</span>
+            <span class="total">10</span>
+        </div>
+    </header>
+
+    <main class="story-container" id="storyContainer">
+
+        <!-- Capítulo 0: Introdução -->
+        <section class="chapter active" data-chapter="0">
+            <div class="chapter-content">
+                <div class="illustration-container">
+                    <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="sunGrad1" cx="50%" cy="50%">
+                                <stop offset="0%" style="stop-color:#FFF59D;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#FFD54F;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+                            </radialGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <g class="sun-rays">
+                            <line x1="400" y1="100" x2="400" y2="50" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                            <line x1="500" y1="150" x2="540" y2="120" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                            <line x1="550" y1="250" x2="600" y2="250" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                            <line x1="500" y1="350" x2="540" y2="380" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                            <line x1="400" y1="400" x2="400" y2="450" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                            <line x1="300" y1="350" x2="260" y2="380" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                            <line x1="250" y1="250" x2="200" y2="250" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                            <line x1="300" y1="150" x2="260" y2="120" stroke="#FFD54F" stroke-width="4"
+                                stroke-linecap="round" opacity="0.6" />
+                        </g>
+
+                        <circle cx="400" cy="250" r="100" fill="url(#sunGrad1)" filter="url(#glow)" class="sun-body" />
+
+                        <circle cx="370" cy="230" r="8" fill="#FF6F00" />
+                        <circle cx="430" cy="230" r="8" fill="#FF6F00" />
+                        <path d="M 360 270 Q 400 290 440 270" stroke="#FF6F00" stroke-width="6" fill="none"
+                            stroke-linecap="round" />
+
+                        <g class="earth-small" transform="translate(650, 100)">
+                            <circle cx="0" cy="0" r="30" fill="#42A5F5" />
+                            <circle cx="-8" cy="-5" r="8" fill="#66BB6A" />
+                            <circle cx="10" cy="8" r="6" fill="#66BB6A" />
+                            <circle cx="5" cy="-8" r="5" fill="#66BB6A" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">Bem-vindo à Aventura de Faiska</h1>
+                    <h2 class="chapter-subtitle">Uma jornada pelo clima espacial</h2>
+                    <p class="chapter-text">
+                        Prepare-se para conhecer Faiska, uma faísca de energia especial que vive no coração do Sol e
+                        sonha em explorar o universo!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 1: O Nascimento de Faiska -->
+        <section class="chapter" data-chapter="1">
+            <div class="chapter-content">
+                <div class="illustration-container">
+                    <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="heartOfTheSun" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="var(--color-light)" />
+                                <stop offset="50%" stop-color="var(--color-accent)" />
+                                <stop offset="100%" stop-color="var(--color-energy)" />
+                            </radialGradient>
+                        </defs>
+
+                        <rect width="800" height="500" fill="url(#heartOfTheSun)" />
+
+                        <path d="M -100 450 Q 200 200 400 350 T 900 250" stroke="var(--color-primary)" stroke-width="80"
+                            fill="none" opacity="0.2" class="aurora" style="animation-duration: 20s;" />
+                        <path d="M -100 100 Q 300 300 500 150 T 900 200" stroke="var(--color-accent)" stroke-width="60"
+                            fill="none" opacity="0.3" class="aurora"
+                            style="animation-duration: 25s; animation-delay: -5s;" />
+
+                        <g class="Faiska-character" transform="translate(400 350)">
+                            <circle cx="0" cy="0" r="40" fill="var(--color-accent)" stroke="var(--color-light)"
+                                stroke-width="4" />
+                            <circle cx="-10" cy="-5" r="5" fill="var(--color-space)" />
+                            <circle cx="10" cy="-5" r="5" fill="var(--color-space)" />
+                            <path d="M -10 10 Q 0 20 10 10" stroke="var(--color-space)" stroke-width="4" fill="none"
+                                stroke-linecap="round" />
+                        </g>
+
+                        <g transform="translate(400 200)">
+                            <circle cx="0" cy="0" r="80" fill="var(--color-space)" stroke="var(--color-light)"
+                                stroke-width="3" stroke-dasharray="5 5" />
+                            <circle cx="-30" cy="-20" r="4" fill="var(--color-light)" class="sparkle"
+                                style="animation-delay: -1s;" />
+                            <circle cx="40" cy="0" r="3" fill="var(--color-light)" class="sparkle"
+                                style="animation-delay: -2s;" />
+                            <circle cx="10" cy="30" r="5" fill="var(--color-light)" class="sparkle"
+                                style="animation-delay: -3s;" />
+                            <circle cx="-40" cy="35" r="2" fill="var(--color-light)" class="sparkle"
+                                style="animation-delay: -4s;" />
+                        </g>
+
+                        <g fill="none" stroke="var(--color-light)" stroke-width="2">
+                            <circle cx="400" cy="300" r="5" opacity="0.8" />
+                            <circle cx="400" cy="285" r="3" opacity="0.6" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">O Nascimento de Faiska</h1>
+                    <h2 class="chapter-subtitle">No coração do Sol</h2>
+                    <p class="chapter-text">
+                        No coração de uma estrela gigante e quentinha chamada Sol, vivia uma pequena faísca de energia
+                        chamada Faiska. Ela brilhava com um amarelo elétrico e um laranja curioso, e sonhava em viajar
+                        pelo escuro e aveludado espaço.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 2: O Grande ATCHIM Solar -->
+        <section class="chapter" data-chapter="2">
+            <div class="chapter-content">
+                <div class="illustration-container">
+                    <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="sun-body" cx="200" cy="250" r="100" fill="var(--color-energy)" />
+                        <g class="explosion-waves" transform-origin="200px 250px" stroke-linecap="round" fill="none"
+                            stroke-width="10">
+                            <path class="wave1" d="M 300 250 C 400 150, 500 200, 600 250" stroke="var(--color-primary)"
+                                stroke-dasharray="100" />
+                            <path class="wave2" d="M 300 250 C 420 350, 520 300, 620 250" stroke="var(--color-energy)"
+                                stroke-dasharray="100" />
+                            <path class="wave3" d="M 300 250 C 380 200, 480 300, 580 250" stroke="var(--color-accent)"
+                                stroke-dasharray="100" />
+                        </g>
+                        <g transform="translate(450 250)">
+                            <circle class="particle1" r="15" fill="var(--color-accent)" />
+                            <circle class="particle2" r="12" fill="var(--color-accent)"
+                                transform="translate(50, -40)" />
+                            <circle class="particle3" r="18" fill="var(--color-accent)" transform="translate(80, 20)" />
+                            <circle class="particle4" r="10" fill="var(--color-accent)" transform="translate(30, 50)" />
+                        </g>
+                        <text x="250" y="150" font-family="Poppins, sans-serif" font-size="80" font-weight="900"
+                            fill="var(--color-primary)" transform="rotate(-15 250 150)">ATCHIM!</text>
+                    </svg>
+                </div>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">O Grande ATCHIM Solar!</h1>
+                    <h2 class="chapter-subtitle">A aventura começa</h2>
+                    <p class="chapter-text">
+                        Um dia, o Sol deu um espirro gigantesco! Um ATCHIM-SOLAR! Milhões de faíscas, como Faiska, foram
+                        lançadas para longe numa onda de energia. Era uma Ejeção de Massa Coronal - o começo da maior
+                        aventura!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 3: Viagem pelo Espaço -->
+        <section class="chapter" data-chapter="3">
+            <div class="chapter-content">
+                <div class="illustration-container">
+                    <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="2" fill="var(--color-light)" class="sparkle" opacity="0.7" />
+                        <circle cx="750" cy="80" r="3" fill="var(--color-light)" class="sparkle" opacity="0.9"
+                            style="animation-delay: -1s;" />
+                        <circle cx="100" cy="450" r="2" fill="var(--color-light)" class="sparkle" opacity="0.8"
+                            style="animation-delay: -2s;" />
+                        <circle cx="600" cy="480" r="2" fill="var(--color-light)" class="sparkle" opacity="0.6"
+                            style="animation-delay: -3s;" />
+
+                        <g transform="translate(150 120)">
+                            <circle cx="0" cy="0" r="50" fill="#E8A87C" />
+                            <path d="M -25 -5 C 0 -15 25 -15 50 -5" stroke="#C38D9E" stroke-width="6" fill="none" />
+                            <path d="M -50 10 C -20 25 30 25 60 10" stroke="#C38D9E" stroke-width="8" fill="none" />
+                            <ellipse cx="0" cy="0" rx="80" ry="20" stroke="var(--color-light)" stroke-width="4"
+                                fill="none" transform="rotate(-15)" opacity="0.8" />
+                        </g>
+
+                        <g transform="translate(600 400)">
+                            <circle cx="0" cy="0" r="35" fill="var(--color-primary)" />
+                            <circle cx="-15" cy="-10" r="8" fill="#C34A36" opacity="0.7" />
+                            <circle cx="10" cy="12" r="5" fill="#C34A36" opacity="0.7" />
+                        </g>
+
+                        <path d="M -50 250 Q 200 180, 400 250 T 850 220" fill="none" stroke="var(--color-secondary)"
+                            stroke-width="5" stroke-dasharray="10 15" opacity="0.6" />
+
+                        <g class="Faiska-traveling" transform="translate(300 235)">
+                            <circle cx="0" cy="0" r="30" fill="var(--color-accent)" stroke="var(--color-light)"
+                                stroke-width="3" />
+                            <path d="M -25 0 Q -50 -15 -70 -15" stroke="var(--color-accent)" stroke-width="8"
+                                fill="none" stroke-linecap="round" opacity="0.8" />
+                            <path d="M -25 0 Q -50 15 -70 15" stroke="var(--color-accent)" stroke-width="8" fill="none"
+                                stroke-linecap="round" opacity="0.8" />
+                            <circle cx="5" cy="-5" r="4" fill="var(--color-space)" />
+                            <circle cx="18" cy="-2" r="4" fill="var(--color-space)" />
+                            <path d="M 8 10 Q 15 15 20 8" stroke="var(--color-space)" stroke-width="3" fill="none"
+                                stroke-linecap="round" />
+                        </g>
+
+                        <g class="earth-small" transform="translate(720 180)">
+                            <circle cx="0" cy="0" r="60" fill="var(--color-earth)" />
+                            <path d="M-50,10 C-20,-40 30,-30 40,20 C 20, 50 -30, 50 -50, 10 Z" fill="#2E86AB"
+                                opacity="0.8" />
+                            <path d="M -20 -10 Q 10 -50 40 -20" stroke="var(--color-light)" stroke-width="5" fill="none"
+                                stroke-linecap="round" opacity="0.7" />
+                            <path d="M 10 30 Q 30 5 50 20" stroke="var(--color-light)" stroke-width="4" fill="none"
+                                stroke-linecap="round" opacity="0.7" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">Viagem pelo Espaço</h1>
+                    <h2 class="chapter-subtitle">O Vento Solar</h2>
+                    <p class="chapter-text">
+                        Faiska e seus irmãos viajaram pelo espaço numa corrente de brilho chamada Vento Solar. Passaram
+                        por planetas rochosos e gigantes gasosos. Depois de alguns dias, avistaram um planeta azul e
+                        verde com nuvens brancas: a Terra!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 4: O Escudo Mágico -->
+        <section class="chapter" data-chapter="4">
+            <div class="chapter-content">
+
+                <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="oceanRealism" cx="35%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#4db8ff" />
+                            <stop offset="100%" stop-color="#005e8d" />
+                        </radialGradient>
+                        <filter id="softClouds">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+                        </filter>
+                        <radialGradient id="shadowGradient" cx="65%" cy="50%" r="50%">
+                            <stop offset="70%" stop-color="black" stop-opacity="0" />
+                            <stop offset="100%" stop-color="black" stop-opacity="0.6" />
+                        </radialGradient>
+                        <linearGradient id="trailGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0" />
+                            <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="1" />
+                        </linearGradient>
+                        <radialGradient id="impactGlow">
+                            <stop offset="0%" stop-color="var(--color-secondary)" stop-opacity="0.8" />
+                            <stop offset="100%" stop-color="var(--color-secondary)" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+
+                    <g transform="translate(400 250) scale(0.9)">
+                        <circle r="160" fill="var(--color-secondary)" opacity="0.2" />
+                        <circle r="150" fill="url(#oceanRealism)" />
+                        <g fill="var(--color-earth)">
+                            <path
+                                d="M-13,-99 C-45,-103,-64,-82,-73,-55 C-77,-41,-72,-28,-63,-13 L-50,8 C-45,21,-52,35,-48,46 C-43,59,-31,64,-21,66 C-3,68,11,56,12,39 C11,28,4,21,-1,10 C-11,-9,-2,-28,3,-40 C10,-55,-3,-77,-13,-99z" />
+                            <path
+                                d="M-28,75 C-33,88,-29,98,-17,103 C-10,106,1,102,10,94 C20,85,23,73,20,64 L-2,66 C-11,70,-22,72,-28,75z" />
+                        </g>
+                        <g filter="url(#softClouds)" opacity="0.6">
+                            <path d="M -100 -30 Q -50 -80 0 -50 T 80 -20" fill="none" stroke="white" stroke-width="15"
+                                stroke-linecap="round" />
+                            <path d="M -80 60 Q -30 30 20 50 T 100 80" fill="none" stroke="white" stroke-width="20"
+                                stroke-linecap="round" />
+                        </g>
+                        <circle r="150" fill="url(#shadowGradient)" />
+                        <circle r="150" fill="none" stroke="var(--color-secondary)" stroke-width="2" opacity="0.9" />
+                    </g>
+
+                    <g class="subtle-shield" fill="none" stroke="var(--color-secondary)" stroke-width="2"
+                        stroke-linecap="round" transform="translate(15 0)">
+                        <ellipse cx="400" cy="250" rx="220" ry="210" opacity="0.8" stroke-dasharray="10 15" />
+                        <ellipse cx="400" cy="250" rx="200" ry="190" opacity="0.6" style="animation-delay: -1s;" />
+                        <ellipse cx="400" cy="250" rx="180" ry="170" opacity="0.4" style="animation-delay: -2s;" />
+                    </g>
+
+                    <g>
+                        <path d="M -50 180 L 190 195" fill="none" stroke="url(#trailGradient)" stroke-width="5"
+                            stroke-linecap="round" />
+
+                        <circle cx="190" cy="195" r="20" fill="url(#impactGlow)" class="subtle-shield" />
+
+                        <circle cx="-50" cy="180" r="8" fill="var(--color-accent)" class="Faiska-character" />
+                    </g>
+                </svg>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">O Escudo Mágico</h1>
+                    <h2 class="chapter-subtitle">A Magnetosfera da Terra</h2>
+                    <p class="chapter-text">
+                        Ao se aproximar, Faiska bateu em algo invisível mas forte: a magnetosfera, o escudo mágico da
+                        Terra! Onde o escudo era mais fino, nos polos, sua energia escorregou para dentro, pintando o
+                        céu com auroras dançantes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 5: Valentina na Estação Espacial -->
+        <section class="chapter" data-chapter="5">
+            <div class="chapter-content">
+                <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="auroraVividGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#39ff14" />
+                            <stop offset="100%" stop-color="#ff007f" />
+                        </linearGradient>
+                        <filter id="auroraGlow">
+                            <feGaussianBlur stdDeviation="10" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <g>
+                        <path d="M -100 500 C 200 280, 600 280, 900 500 Z" fill="#00214d" />
+                        <g fill="var(--color-accent)" opacity="0.8">
+                            <circle cx="450" cy="420" r="2.5" class="sparkle" />
+                            <circle cx="460" cy="425" r="1.5" class="sparkle" style="animation-delay:-1s" />
+                            <circle cx="445" cy="435" r="2" class="sparkle" style="animation-delay:-1.5s" />
+                            <circle cx="280" cy="450" r="2" class="sparkle" style="animation-delay:-2s" />
+                            <circle cx="295" cy="455" r="1.5" class="sparkle" style="animation-delay:-2.5s" />
+                            <circle cx="580" cy="460" r="2" class="sparkle" style="animation-delay:-3s" />
+                        </g>
+                    </g>
+
+                    <g class="aurora" fill-opacity="0.6" filter="url(#auroraGlow)">
+                        <path d="M 0 350 C 150 250, 300 250, 450 320 C 600 390, 800 350, 800 350 L 800 500 L 0 500 Z"
+                            fill="url(#auroraVividGrad)" />
+                        <path d="M 0 380 C 200 300, 350 300, 500 360 C 650 420, 800 380, 800 380 L 800 500 L 0 500 Z"
+                            fill="var(--color-space)" opacity="0.4" style="animation-delay:-1s" />
+                    </g>
+
+                    <g transform="translate(400 160) rotate(-15)">
+                        <rect x="-250" y="-4" width="500" height="8" fill="#b0bec5" />
+
+                        <g fill="#eceff1" stroke="#90a4ae" stroke-width="1">
+                            <rect x="-80" y="-15" width="160" height="30" rx="15" />
+                            <rect x="-20" y="-25" width="40" height="50" rx="10" />
+                        </g>
+
+                        <g transform="translate(0, 35)">
+                            <path d="M -25 0 A 25 25 0 0 1 25 0 Z" fill="#eceff1" stroke="#90a4ae" stroke-width="1" />
+                            <circle cx="0" cy="0" r="20" fill="var(--color-space)" opacity="0.7" />
+                            <g transform="scale(0.8)">
+                                <circle cx="0" cy="-2" r="8" fill="var(--color-light)" />
+                                <path d="M -10 4 L 10 4 L 5 14 L -5 14 Z" fill="#cfd8dc" />
+                            </g>
+                        </g>
+
+                        <g transform="translate(-200, 0) rotate(25)">
+                            <rect x="-100" y="-5" width="200" height="10" fill="#78909c" />
+                            <g fill="#001f3f">
+                                <rect x="-90" y="-60" width="70" height="55" />
+                                <rect x="-90" y="5" width="70" height="55" />
+                                <rect x="20" y="-60" width="70" height="55" />
+                                <rect x="20" y="5" width="70" height="55" />
+                            </g>
+                        </g>
+
+                        <g transform="translate(200, 0) rotate(25)">
+                            <rect x="-100" y="-5" width="200" height="10" fill="#78909c" />
+                            <g fill="#001f3f">
+                                <rect x="-90" y="-60" width="70" height="55" />
+                                <rect x="-90" y="5" width="70" height="55" />
+                                <rect x="20" y="-60" width="70" height="55" />
+                                <rect x="20" y="5" width="70" height="55" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">Valentina na Estação Espacial</h1>
+                    <h2 class="chapter-subtitle">Auroras no espaço</h2>
+                    <p class="chapter-text">
+                        Na Estação Espacial Internacional, a astronauta Valentina viu uma aurora boreal incrível! As
+                        luzes verdes e rosas dançavam. Ela sabia que essa beleza significava que precisava checar se
+                        todos os equipamentos estavam seguros.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 6: Lars, o Piloto -->
+        <section class="chapter" data-chapter="6">
+            <div class="chapter-content">
+                <div class="illustration-container">
+                    <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="auroraVividCockpitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#39ff14" />
+                                <stop offset="50%" stop-color="#00c9ff" />
+                                <stop offset="100%" stop-color="#a855f7" />
+                            </linearGradient>
+                            <filter id="auroraGlow">
+                                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <linearGradient id="panelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#3c4a54" />
+                                <stop offset="100%" stop-color="#28353d" />
+                            </linearGradient>
+                        </defs>
+
+                        <g>
+                            <g filter="url(#auroraGlow)" opacity="0.7">
+                                <path class="aurora"
+                                    d="M -100 220 C 100 120, 300 120, 500 220 C 700 320, 900 220, 900 220"
+                                    fill="url(#auroraVividCockpitGrad)" />
+                                <path class="aurora"
+                                    d="M -50 250 C 150 150, 350 150, 550 250 C 750 350, 950 250, 950 250"
+                                    fill="url(#auroraVividCockpitGrad)" opacity="0.5" style="animation-delay:-1s" />
+                            </g>
+                            <path d="M -50 500 L 150 380 L 300 450 L 500 350 L 700 430 L 850 500 Z" fill="#00213a" />
+                        </g>
+
+                        <g>
+                            <path
+                                d="M0 0 H 800 V 500 H 0 Z M 80 50 H 720 A 30 30 0 0 1 750 80 V 370 A 30 30 0 0 1 720 400 H 80 A 30 30 0 0 1 50 370 V 80 A 30 30 0 0 1 80 50 Z"
+                                fill="#1c2830" fill-rule="evenodd" />
+
+                            <line x1="400" y1="50" x2="400" y2="400" stroke="#000" stroke-width="8" opacity="0.7" />
+                            <line x1="400" y1="50" x2="400" y2="400" stroke="#28353d" stroke-width="4" />
+
+                            <rect y="400" width="800" height="100" fill="url(#panelGradient)" />
+
+                            <g transform="translate(300, 410)">
+                                <rect x="-5" y="-5" width="210" height="90" fill="#212121" rx="8" />
+                                <rect width="200" height="80" fill="#000" rx="5" />
+                                <path d="M 20 70 L 60 50 L 90 60 L 130 30 L 180 40" stroke="var(--color-secondary)"
+                                    stroke-width="3" fill="none" opacity="0.4" />
+                                <g class="interference">
+                                    <path d="M 0 30 L 200 45 M 0 50 L 200 35" stroke="var(--color-primary)"
+                                        stroke-width="1.5" opacity="0.7" />
+                                    <text x="35" y="50" fill="var(--color-primary)" font-size="24"
+                                        font-family="monospace" font-weight="bold">SEM SINAL</text>
+                                </g>
+                            </g>
+
+                            <g transform="translate(150, 455)">
+                                <circle r="40" fill="#1b262c" />
+                                <circle r="35" fill="#e0e0e0" />
+                                <text x="-22" y="8" fill="black" font-family="sans-serif" font-size="20">E</text>
+                                <text x="15" y="8" fill="black" font-family="sans-serif" font-size="20">W</text>
+                                <path d="M 0 0 L 0 -25" stroke="#f44336" stroke-width="4" stroke-linecap="round" />
+                            </g>
+                            <g transform="translate(650, 455)">
+                                <circle r="40" fill="#1b262c" />
+                                <circle r="35" fill="#111" />
+                                <path d="M 0 0 L 25 25" stroke="#29b6f6" stroke-width="3" />
+                                <circle cx="25" cy="25" r="3" fill="#29b6f6" />
+                            </g>
+
+                            <g transform="translate(530, 420)">
+                                <rect x="0" y="0" width="20" height="15" fill="var(--color-primary)" rx="3" />
+                                <rect x="0" y="25" width="20" height="15" fill="var(--color-secondary)" rx="3" />
+                            </g>
+
+                            <g transform="translate(400 450)">
+                                <path d="M -80 50 L -70 20 H 70 L 80 50" fill="#3c4a54" />
+                                <rect x="-20" y="20" width="40" height="30" fill="#28353d" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">Lars, o Piloto</h1>
+                    <h2 class="chapter-subtitle">Cócegas nos satélites</h2>
+                    <p class="chapter-text">
+                        Nos céus da Noruega, o piloto Lars notou o rádio fazendo ruídos estranhos e o GPS piscando.
+                        Faiska estava fazendo cócegas nos satélites! Lars sorriu e usou seus mapas de papel e bússola,
+                        como os pilotos de antigamente.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 7: Jorge, o Fazendeiro -->
+        <section class="chapter" data-chapter="7">
+            <div class="chapter-content">
+                <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(750, 50) scale(-1, 1)">
+
+                        <g fill="#3cb371">
+                            <path d="M 50 150 H 350 L 400 200 H 50 V 150 Z" />
+                            <path d="M 50 200 H 400 V 300 H 50 V 200 Z" />
+                            <path d="M 480 150 A 130 130 0 0 1 610 280 L 350 280 A 130 130 0 0 0 480 150 Z"
+                                fill="#66cdab" />
+                        </g>
+
+                        <g transform="translate(0, -50)">
+                            <path d="M 380 50 H 580 L 600 200 H 400 L 380 50 Z" fill="#66cdab" />
+                            <path d="M 405 65 H 570 L 585 190 H 420 L 405 65 Z" fill="#afeeee" />
+                            <path d="M 430 180 L 480 80" stroke="#3a3a3a" stroke-width="8" stroke-linecap="round" />
+                        </g>
+
+                        <g transform="translate(480, 270)">
+                            <circle r="130" fill="#3a3a3a" />
+                            <circle r="110" fill="#f0e68c" />
+                            <circle r="70" fill="#fffacd" />
+                            <circle r="22" fill="#3a3a3a" />
+                        </g>
+
+                        <g transform="translate(150, 320)">
+                            <circle r="70" fill="#3a3a3a" />
+                            <circle r="55" fill="#f0e68c" />
+                            <circle r="35" fill="#fffacd" />
+                            <circle r="12" fill="#3a3a3a" />
+                        </g>
+
+                        <g>
+                            <rect x="300" y="300" width="50" height="15" fill="#8b4513" />
+                            <rect x="300" y="330" width="50" height="15" fill="#8b4513" />
+                            <g transform="translate(0, -50)">
+                                <rect x="320" y="80" width="20" height="70" fill="#555" />
+                                <ellipse cx="330" cy="80" rx="12" ry="5" fill="#666" />
+                                <circle cx="580" cy="140" r="8" fill="#ffd700" />
+                            </g>
+                            <path d="M 50 210 L 80 210 L 90 220 L 80 230 L 50 230 Z" fill="#f0e68c" />
+                            <circle cx="280" cy="140" r="10" fill="#555" />
+                        </g>
+                    </g>
+                </svg>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">Jorge, o Fazendeiro</h1>
+                    <h2 class="chapter-subtitle">O trator confuso</h2>
+                    <p class="chapter-text">
+                        Na fazenda no Canadá, o trator super moderno de Jorge parou de funcionar. O GPS estava confuso!
+                        Jorge desceu, olhou para o céu e gritou: "Ok, Sol! Hoje quem dirige sou eu!" E assumiu o volante
+                        com um sorriso.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 8: Helena, a Guardiã da Energia -->
+        <section class="chapter" data-chapter="8">
+            <div class="chapter-content">
+
+                <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="streetLampGlow">
+                            <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0.7" />
+                            <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+
+                    <g>
+                        <path d="M 0 500 L 250 350 H 550 L 800 500 Z" fill="#424242" />
+                        <path d="M 0 500 V 450 L 250 350 V 360 Z" fill="#616161" />
+                        <path d="M 800 500 V 450 L 550 350 V 360 Z" fill="#616161" />
+                    </g>
+
+                    <g>
+                        <path d="M 0 450 L 250 350 V 100 L 0 150 Z" fill="#616161" opacity="0.8" />
+                        <g fill="var(--color-accent)" opacity="0.8">
+                            <rect x="50" y="200" width="40" height="40" />
+                            <rect x="110" y="200" width="40" height="40" />
+                        </g>
+
+                        <path d="M 800 450 L 550 350 V 100 L 800 150 Z" fill="#757575" opacity="0.8" />
+                        <g fill="var(--color-secondary)" opacity="0.7">
+                            <rect x="610" y="200" width="40" height="40" />
+                            <rect x="670" y="200" width="40" height="40" />
+                        </g>
+                    </g>
+
+                    <g>
+                        <rect x="280" y="180" width="10" height="170" fill="#9e9e9e" />
+                        <circle cx="285" cy="180" r="30" fill="url(#streetLampGlow)" />
+                        <circle cx="285" cy="180" r="8" fill="var(--color-light)" />
+
+                        <rect x="510" y="180" width="10" height="170" fill="#bdbdbd" />
+                        <circle cx="515" cy="180" r="30" fill="url(#streetLampGlow)" />
+                        <circle cx="515" cy="180" r="8" fill="var(--color-light)" />
+
+                        <g stroke="#212121" stroke-width="2">
+                            <path d="M 285 190 Q 400 205, 515 190" />
+                            <path d="M 285 198 Q 400 213, 515 198" />
+                        </g>
+                    </g>
+                </svg>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">Helena, a Guardiã da Energia</h1>
+                    <h2 class="chapter-subtitle">Protegendo as luzes da cidade</h2>
+                    <p class="chapter-text">
+                        Helena trabalhava na central elétrica quando luzes de alerta piscaram! A energia de Faiska
+                        estava tentando entrar nos fios. Helena, a guardiã da eletricidade, desviou a energia extra
+                        garantindo que as luzes continuassem acesas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capítulo 9: Os Meteorologistas do Espaço -->
+        <section class="chapter" data-chapter="9">
+            <div class="chapter-content">
+                <div class="illustration-container">
+                    <svg class="illustration" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="deepSpace" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#02091a" />
+                                <stop offset="100%" stop-color="#000" />
+                            </linearGradient>
+                            <radialGradient id="milkyWayGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="white" stop-opacity="0.15" />
+                                <stop offset="100%" stop-color="white" stop-opacity="0" />
+                            </radialGradient>
+                            <linearGradient id="telescopeMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#eceff1" />
+                                <stop offset="100%" stop-color="#90a4ae" />
+                            </linearGradient>
+                        </defs>
+
+                        <g>
+                            <rect width="800" height="500" fill="url(#deepSpace)" />
+                            <ellipse cx="400" cy="200" rx="400" ry="150" fill="url(#milkyWayGlow)"
+                                transform="rotate(-25 400 200)" />
+                            <circle cx="100" cy="400" r="1.5" fill="white" opacity="0.8" class="sparkle" />
+                            <circle cx="700" cy="100" r="2" fill="white" opacity="0.9" class="sparkle"
+                                style="animation-delay:-1s" />
+                            <circle cx="400" cy="220" r="1" fill="white" opacity="0.9" class="sparkle"
+                                style="animation-delay:-1.5s" />
+                            <circle cx="350" cy="200" r="1.5" fill="white" opacity="0.7" class="sparkle"
+                                style="animation-delay:-2s" />
+                            <circle cx="480" cy="180" r="1" fill="white" opacity="0.9" class="sparkle"
+                                style="animation-delay:-2.5s" />
+                        </g>
+
+                        <path d="M 0 500 V 420 C 100 400, 250 450, 400 430 C 550 410, 700 440, 800 420 V 500 H 0 Z"
+                            fill="#4e342e" />
+                        <path d="M 0 500 V 450 C 150 440, 300 480, 450 460 C 600 440, 750 460, 800 450 V 500 H 0 Z"
+                            fill="#3e2723" />
+
+                        <g transform="translate(320, 450) rotate(-15) scale(1.3)">
+                            <g stroke="#212121" stroke-width="8" stroke-linecap="round">
+                                <line x1="0" y1="-100" x2="-100" y2="70" />
+                                <line x1="0" y1="-100" x2="30" y2="70" />
+                                <line x1="0" y1="-100" x2="100" y2="70"
+                                    transform="translate(30,0) scale(0.8) rotate(5)" />
+                            </g>
+
+                            <rect x="-25" y="-120" width="50" height="40" fill="#616161" rx="5" />
+
+                            <g transform="rotate(-20)">
+                                <rect x="-200" y="-25" width="300" height="50" fill="url(#telescopeMetal)" rx="10" />
+                                <rect x="100" y="-20" width="50" height="40" fill="#455a64" />
+                                <rect x="-210" y="-20" width="10" height="40" fill="#212121" />
+                                <rect x="-100" y="-40" width="80" height="15" fill="#546e7a" rx="5" />
+                                <rect x="120" y="20" width="15" height="30" fill="#37474f" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="text-content">
+                    <h1 class="chapter-title">Os Meteorologistas do Espaço</h1>
+                    <h2 class="chapter-subtitle">Protegendo nosso planeta</h2>
+                    <p class="chapter-text">
+                        É por isso que temos cientistas que ficam de olho no Sol! Quando veem o Sol preparando um grande
+                        ATCHIM, eles avisam a todos. Assim, astronautas, pilotos, fazendeiros e guardiões da energia
+                        podem se preparar para visitas de faíscas curiosas como Faiska!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="navigation">
+        <button class="nav-btn prev-btn" id="prevBtn" disabled>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>Anterior</span>
+        </button>
+
+        <button class="nav-btn next-btn" id="nextBtn">
+            <span>Próximo</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <a href="historias_estelares_final.html" class="nav-btn" style="margin-left: 16px;">
+            <span>Voltar para Histórias Estelares</span>
+        </a>
+    </nav>
+
+    <script src="Faiska.js"></script>
+</body>
+
+</html>

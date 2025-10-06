@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Histórias Estelares – Clima Espacial</title>
+  <meta name="description" content="Histórias Estelares: uma história infantil digital sobre clima espacial e seus impactos em agricultores, pilotos, astronautas e redes elétricas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_css_final.css">
+
+  <style>
+    /* --- Rodapé NASA --- */
+    .more-resources {
+      margin-top: 2.5rem;
+      padding: 1.8rem;
+      background-color: rgba(255, 255, 255, 0.08);
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+    }
+
+    .more-resources p {
+      font-size: 1.1rem;
+      color: var(--muted, #ccc);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .more-resources ul {
+      list-style: none;
+      padding: 0;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .more-resources li {
+      margin: 0.6rem 0;
+    }
+
+    .more-resources a {
+      color: #FFD76A;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .more-resources a:hover {
+      color: #fff;
+      text-shadow: 0 0 6px #FFD76A;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-space" aria-hidden="true" id="bgSpace">
+    <div class="planet sun"></div>
+    <div class="planet earth"></div>
+    <div class="planet jupiter"></div>
+    <div class="comet"></div>
+    <svg class="sun-svg-right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <radialGradient id="sunGradientRight" cx="50%" cy="50%">
+          <stop offset="0%" style="stop-color:#FFF59D;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#FFD54F;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+        </radialGradient>
+        <filter id="sunGlow">
+          <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <g class="sun-rays-right">
+        <line x1="100" y1="100" x2="100" y2="30" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+        <line x1="135" y1="65" x2="165" y2="35" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+        <line x1="170" y1="100" x2="240" y2="100" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+        <line x1="135" y1="135" x2="165" y2="165" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+        <line x1="100" y1="170" x2="100" y2="240" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+        <line x1="65" y1="135" x2="35" y2="165" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+        <line x1="30" y1="100" x2="-40" y2="100" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+        <line x1="65" y1="65" x2="35" y2="35" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+      </g>
+      <circle cx="100" cy="100" r="45" fill="url(#sunGradientRight)" filter="url(#sunGlow)" class="sun-body-right" />
+      <circle cx="87" cy="92" r="3.5" fill="#FF6F00" />
+      <circle cx="113" cy="92" r="3.5" fill="#FF6F00" />
+      <path d="M 85 108 Q 100 116 115 108" stroke="#FF6F00" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    </svg>
+  </div> 
+
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" fill="#FFD76A"/>
+            <circle cx="30" cy="14" r="9" fill="#FF6B81" opacity="0.95"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Histórias Estelares</h1>
+          <p>Clima Espacial – Através dos Olhos dos Terráqueos</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="kicker">Desafio – Divisão de Heliofísica</div>
+        <h2>Um conto ilustrado sobre o clima espacial e quem ele toca.</h2>
+        <p>Embora o Sol esteja a 150 milhões de quilômetros de distância, sua atividade afeta diretamente nossa vida. O "clima espacial" – as variações entre o Sol e a Terra – pode interferir em satélites, comunicações, GPS e redes elétricas. Este projeto convida você a aprender e imaginar como esse fenômeno é visto pelos nossos olhos terrestres.</p>
+        <a class="cta" href="Faiska.html" target="_blank">Ler a história</a>
+        <hr class="divider">
+        <div class="impact-list">
+          <div class="impact-item">
+            <div class="impact-icon">☀️</div>
+            <div class="impact-what"><strong>O Sol pode emitir erupções</strong><span style="color:var(--muted)">As chamadas EMC – nuvens de partículas que viajam até a Terra.</span></div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-icon">🪐</div>
+            <div class="impact-what"><strong>Satélites e GPS</strong><span style="color:var(--muted)">Podem perder sinal ou sofrer ruído nas comunicações.</span></div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-icon">⚡</div>
+            <div class="impact-what"><strong>Redes elétricas</strong><span style="color:var(--muted)">Correntes induzidas podem danificar transformadores se não houver proteção.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<main id="story">
+  <div class="grid">
+    <article class="card">
+      <h3>O Sol</h3>
+      <p>O Sol é uma estrela viva e cheia de energia! Às vezes, ele libera enormes explosões de luz e partículas chamadas <strong>erupções solares</strong>. Essas partículas viajam muito rápido e formam o que chamamos de <strong>clima espacial</strong> – um tipo de "tempo" que acontece fora da Terra.</p>
+    </article>
+
+    <article class="card">
+      <h3>A Viagem pelo Espaço</h3>
+      <p>Quando o Sol solta essas partículas, elas viajam pelo espaço como um vento invisível, conhecido como <strong>vento solar</strong>. A Terra tem um escudo protetor chamado <strong>magnetosfera</strong>, que desvia a maior parte desse vento. Mas quando o vento é muito forte, ele pode mexer nas comunicações e até nas luzes do céu!</p>
+    </article>
+
+    <article class="card">
+      <h3>As Luzes do Norte e do Sul</h3>
+      <p>Quando as partículas do Sol entram em contato com a atmosfera da Terra, elas criam um espetáculo colorido chamado <strong>aurora</strong>. No Norte chamamos de <em>Aurora Boreal</em>, e no Sul de <em>Aurora Austral</em>. As auroras são o jeito da Terra mostrar que está "brincando" com o vento solar!</p>
+    </article>
+
+    <article class="card">
+      <h3>A Nave e o Astronauta</h3>
+      <p>Os astronautas precisam ficar atentos ao clima espacial. Se uma tempestade solar acontecer, eles se abrigam em partes seguras da estação espacial para evitar a radiação. A NASA monitora o Sol o tempo todo para avisar quando é preciso se proteger.</p>
+    </article>
+
+    <article class="card">
+      <h3>A Terra se Protege</h3>
+      <p>Nosso planeta tem um campo magnético que funciona como um grande escudo invisível. Ele impede que a maior parte das partículas do Sol nos atinja diretamente. Sem esse escudo, os satélites, os aviões e até as redes de energia poderiam ter grandes problemas!</p>
+    </article>
+
+    <article class="card">
+      <h3>Por que Estudar o Clima Espacial?</h3>
+      <p>Os cientistas da NASA estudam o clima espacial para proteger satélites, astronautas e pessoas na Terra. Entender como o Sol se comporta ajuda a planejar viagens espaciais seguras e a manter nossas comunicações funcionando direitinho.</p>
+    </article>
+  </div>
+
+  <section class="card" style="margin-bottom:18px">
+    <h3>Atividades interativas (para professores)</h3>
+    <p style="color:var(--muted)">
+      🧭 Experimente com as crianças: use uma bússola para mostrar o campo magnético da Terra, desenhe o Sol soltando "ventos solares" e observe vídeos de auroras no site da NASA!  
+      <br><small>Fonte: NASA Space Weather – Education Resources</small>
+    </p>
+  </section>
+
+  <section class="card">
+    <h3>Guia rápido – Como explicar para crianças</h3>
+    <p style="color:var(--muted)">
+      Diga que o Sol é como um grande fogão que manda "sopros quentes" pelo espaço. A Terra usa um escudo invisível para se proteger desses sopros. Às vezes, o encontro entre os dois faz o céu brilhar com cores mágicas chamadas auroras!
+    </p>
+  </section>
+
+  <!-- Rodapé NASA -->
+  <footer class="more-resources">
+    <p>🌟 Quer explorar mais atividades, jogos e curiosidades sobre o Sol e a Terra?</p>
+    <ul>
+      <li><a href="https://spaceplace.nasa.gov/menu/sun/" target="_blank">Atividades & Jogos sobre o Sol – NASA Space Place</a></li>
+      <li><a href="https://spaceplace.nasa.gov/menu/earth/" target="_blank">Atividades & Jogos sobre a Terra – NASA Space Place</a></li>
+
+    </ul>
+
+  </footer>
+</main>
+
+  <div id="chat-widget">
+    <div id="chat-header">👋 Fale com a Estrelinha!</div>
+    <div id="chat-body"></div>
+    <input id="chat-input" placeholder="Escreva sua pergunta..." autocomplete="off">
+  </div>
+
+  <script src="historias_estelares.js"></script>
+</body>
+
+<div class="grid">
+  <article class="card expandable-card" onclick="toggleSources(this)">
+    <h3>Erupções Solares e EMCs</h3>
+    <p>Erupções solares são explosões massivas de energia que liberam até 10²⁵ joules em minutos. As EMCs (Ejeções de Massa Coronal) podem viajar a velocidades de 250-3000 km/s, levando de 15 horas a 3 dias para atingir a Terra.</p>
+    <div class="card-sources">
+      <div class="sources-content">
+        <h4>📚 Fontes NASA:</h4>
+        <p>
+          <strong>NASA Solar Dynamics Observatory (SDO)</strong><br>
+          <a href="https://sdo.gsfc.nasa.gov/" target="_blank">https://sdo.gsfc.nasa.gov/</a><br><br>
+          <strong>SOHO Mission (NASA/ESA)</strong><br>
+          <a href="https://soho.nascom.nasa.gov/" target="_blank">https://soho.nascom.nasa.gov/</a>
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card expandable-card" onclick="toggleSources(this)">
+    <h3>Impactos em Sistemas de Navegação</h3>
+    <p>Durante tempestades solares severas, a precisão do GPS pode degradar de 1-5 metros para 10-100 metros. O evento de Halloween de 2003 causou interrupções significativas em sistemas de navegação aérea e marítima.</p>
+    <div class="card-sources">
+      <div class="sources-content">
+        <h4>📚 Fontes NASA:</h4>
+        <p>
+          <strong>NOAA Space Weather Prediction Center</strong><br>
+          <a href="https://www.swpc.noaa.gov/" target="_blank">https://www.swpc.noaa.gov/</a><br><br>
+          <strong>NASA Space Weather Database</strong><br>
+          <a href="https://ccmc.gsfc.nasa.gov/" target="_blank">https://ccmc.gsfc.nasa.gov/</a>
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card expandable-card" onclick="toggleSources(this)">
+    <h3>Radiação Espacial e Astronautas</h3>
+    <p>Astronautas podem receber doses de radiação equivalentes a 150-200 radiografias de tórax durante uma tempestade solar intensa. A ISS possui áreas blindadas que reduzem a exposição em até 30%.</p>
+    <div class="card-sources">
+      <div class="sources-content">
+        <h4>📚 Fontes NASA:</h4>
+        <p>
+          <strong>NASA Heliophysics Division</strong><br>
+          <a href="https://science.nasa.gov/heliophysics/" target="_blank">https://science.nasa.gov/heliophysics/</a><br><br>
+          <strong>Living With a Star Program</strong><br>
+          <a href="https://lws.larc.nasa.gov/" target="_blank">https://lws.larc.nasa.gov/</a>
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card expandable-card" onclick="toggleSources(this)">
+    <h3>Interferências em Comunicações</h3>
+    <p>Tempestades solares podem causar blackouts de rádio HF por horas ou dias. Durante o evento Carrington (1859), sistemas telegráficos falharam globalmente, com alguns operadores recebendo choques elétricos.</p>
+    <div class="card-sources">
+      <div class="sources-content">
+        <h4>📚 Fontes NASA:</h4>
+        <p>
+          <strong>NOAA Space Weather Archive</strong><br>
+          <a href="https://www.swpc.noaa.gov/" target="_blank">https://www.swpc.noaa.gov/</a><br><br>
+          <strong>NASA Historical Database</strong><br>
+          <a href="https://ccmc.gsfc.nasa.gov/" target="_blank">https://ccmc.gsfc.nasa.gov/</a>
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card expandable-card" onclick="toggleSources(this)">
+    <h3>Riscos para Redes Elétricas</h3>
+    <p>A tempestade de março de 1989 causou colapso da rede elétrica de Quebec, deixando 6 milhões de pessoas sem energia por 9 horas. Correntes geomagnéticas induzidas podem danificar permanentemente transformadores de alta tensão.</p>
+    <div class="card-sources">
+      <div class="sources-content">
+        <h4>📚 Fontes NASA:</h4>
+        <p>
+          <strong>Living With a Star Program</strong><br>
+          <a href="https://lws.larc.nasa.gov/" target="_blank">https://lws.larc.nasa.gov/</a><br><br>
+          <strong>NOAA Space Weather Impacts</strong><br>
+          <a href="https://www.swpc.noaa.gov/" target="_blank">https://www.swpc.noaa.gov/</a>
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card expandable-card" onclick="toggleSources(this)">
+    <h3>Monitoramento e Previsão</h3>
+    <p>O satélite SOHO detecta EMCs com até 48-72 horas de antecedência. O NOAA Space Weather Prediction Center emite alertas quando índices Kp excedem 5, indicando tempestades geomagnéticas moderadas a severas.</p>
+    <div class="card-sources">
+      <div class="sources-content">
+        <h4>📚 Fontes NASA:</h4>
+        <p>
+          <strong>SOHO Mission</strong><br>
+          <a href="https://soho.nascom.nasa.gov/" target="_blank">https://soho.nascom.nasa.gov/</a><br><br>
+          <strong>NOAA Prediction Center</strong><br>
+          <a href="https://www.swpc.noaa.gov/" target="_blank">https://www.swpc.noaa.gov/</a>
+        </p>
+      </div>
+    </div>
+  </article>
+</div>
+
+<script>
+function toggleSources(card) {
+  const sources = card.querySelector('.card-sources');
+  const isActive = card.classList.contains('active');
+  
+  // Fecha todos os outros cards
+  document.querySelectorAll('.expandable-card').forEach(c => {
+    c.classList.remove('active');
+    c.querySelector('.card-sources').classList.remove('active');
+  });
+  
+  // Abre o card clicado (se não estava aberto)
+  if (!isActive) {
+    card.classList.add('active');
+    sources.classList.add('active');
+  }
+}
+</script>
+      <section class="card">
+        <h3>Dados Científicos Principais</h3>
+        <p style="line-height:1.8">
+          • <strong>Ciclo Solar:</strong> Aproximadamente 11 anos entre máximos de atividade solar<br>
+          • <strong>Velocidade das EMCs:</strong> Média de 500 km/s, podendo atingir 3000 km/s<br>
+          • <strong>Energia de erupção solar classe X:</strong> Equivalente a bilhões de bombas atômicas<br>
+          • <strong>Temperatura da coroa solar:</strong> 1-3 milhões de graus Celsius<br>
+          • <strong>Campo magnético da magnetosfera:</strong> Protege contra 99% das partículas solares<br>
+          • <strong>Auroras:</strong> Ocorrem entre 100-400 km de altitude na ionosfera
+        </p>
+      </section>
+    </main>
