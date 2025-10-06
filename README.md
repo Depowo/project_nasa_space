@@ -19,14 +19,18 @@ JavaScript: To add interactivity, animations, and dynamic functionalities to the
 File Structure
 The project is organized as follows:
 
-Projeto NASA/
-│
-├── historias_estelares_final.html  # Main page file
-├── style_css_final.css             # Main stylesheet
-│
-├── historias_estelares.js          # Script for the "stories" logic
-├── Faiska.html                     # Secondary component or page
-└── Faiska.js                       # Script related to the "Faiska" component
+Projeto NASA
+
+.historias_estelares_final.html  # Main page file
+
+.style_css_final.css             # Main stylesheet
+
+.historias_estelares.js          # Script for the "stories" logic
+
+.Faiska.html                     # Secondary component or page
+
+.Faiska.js                       # Script related to the "Faiska" component
+ 
 historias_estelares_final.html: This is the main entry file that should be opened in the browser. It contains the entire structure of the page.
 
 style_css_final.css: Contains all the styling code, including colors, fonts, layouts, and animations.
